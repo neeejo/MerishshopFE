@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 import { LoaderSpinnerComponent } from './shared';
 
@@ -8,6 +9,6 @@ import { LoaderSpinnerComponent } from './shared';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [RouterModule, LoaderSpinnerComponent],
+  imports: [RouterModule, LoaderSpinnerComponent, CommonModule],
 })
 export class AppComponent {}

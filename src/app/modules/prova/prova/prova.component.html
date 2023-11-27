@@ -1,0 +1,7 @@
+<form [formGroup]="ordineForm" (ngSubmit)="onSubmit()">
+<p>Quantità</p>
+<input value={{ordine.quantita}}/>
+<p>totale</p>
+<input value={{ordine.totale}}/>
+<button type="submit">INSERISCI ORDINE</button>
+</form>

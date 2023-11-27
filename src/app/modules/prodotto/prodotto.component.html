@@ -1,0 +1,10 @@
+<div>
+    <h3>MODIFICA IL TUO PRODOTTO</h3>
+    <form [formGroup] = "prodottoForm" (ngSubmit)="onSubmit()">
+        <p>ID<input formControlName="id" [ngModel]="data.id"/> (inserisci l'id del prodotto da modificare) </p>
+        <p>NOME<input formControlName="nome" [ngModel]="data.nome"/></p>
+        <p>TIPOLOGIA<input formControlName="tipologia" [ngModel]="data.tipologia"/></p>
+        <p>PREZZO<input formControlName="prezzo" [ngModel]="data.prezzo"/></p>
+        <button type="submit">SALVA</button>
+    </form>
+</div>

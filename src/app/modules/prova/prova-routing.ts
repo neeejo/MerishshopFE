@@ -1,0 +1,27 @@
+import { inject } from "@angular/core";
+import { Routes } from "@angular/router";
+import { ProvaService } from "src/app/services/prova.service";
+import { RicettaService } from "src/app/services/ricetta.service";
+
+export const routes: Routes = [
+    {
+        path : '',
+        title : 'Prodotto',
+        loadComponent:() => import('../lista-prodotti/lista-prodotti.component'),
+        resolve: {
+            prodotti : () => inject(ProvaService).getAllProdotti(),
+        },
+        children: [
+            {
+                path:'',
+                redirectTo:'prodotto',
+                pathMatch:'full',
+            },
+            {
+                path:'prodotto',
+                title:'Prodotto',
+                loadComponent: () => import('../prodotto/prodotto.component'),
+            },
+        ],
+    },
+];
