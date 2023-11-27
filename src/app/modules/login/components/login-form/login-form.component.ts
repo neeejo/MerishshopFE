@@ -83,16 +83,16 @@ export default class LoginFormComponent {
     private notificationService: NotificationService
   ) {
     this.loginForm = this.fb.group({
-      email: [
+      username: [
         '',
-        [
-          Validators.required,
+        /*[
+          (Validators.required,
           Validators.pattern(
             /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
           ),
           Validators.minLength(3),
           Validators.maxLength(128),
-        ],
+        ],*/
       ],
       password: [
         '',
@@ -138,7 +138,8 @@ export default class LoginFormComponent {
       this.loginService.login(this.loginForm.value).subscribe({
         next: (res) => {
           this.loginService.setUtenteSession(res?.username, res?.usertype);
-          this.router.navigate(['/gestionale/utenti']);
+          //this.router.navigate(['/gestionale/utenti']);
+          this.router.navigate(['/prova']);
           this.loaderSpinnerService.hide()
         },
         error: (error) => {

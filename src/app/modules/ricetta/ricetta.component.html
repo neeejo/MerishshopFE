@@ -1,0 +1,13 @@
+<div *ngFor="let ricetta of ricette;">
+    <p>{{ricetta.nome}}</p>
+</div>
+
+<h3> INSERIMENTO </h3>
+
+<div>
+    <form [formGroup]="ricettaForm" (ngSubmit)="onSubmit()">
+        <input class="border" formControlName="nome"/>
+        <app-ingrediente (eventEmitter)="insertIngrediente($event)"></app-ingrediente>
+        <button type="submit">SALVA</button>
+    </form>
+</div>

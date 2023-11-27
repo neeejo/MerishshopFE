@@ -1,0 +1,5 @@
+<div *ngFor="let ordine of lista;">
+  <app-prova 
+  [ordine]="ordine"
+  (eventEmitter)="insertOrd($event)"></app-prova>
+</div>

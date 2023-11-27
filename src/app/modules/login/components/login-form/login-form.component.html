@@ -15,16 +15,16 @@
         <mat-label>{{ inputConstant.email }}</mat-label>
         <input
           matInput
-          formControlName="email"
+          formControlName="username"
           name="username"
           autocomplete="username"
         />
         <mat-error>{{
-          loginForm.controls['email'].hasError("pattern")
+          loginForm.controls['username'].hasError("pattern")
             ? errorsConstant.input.email_pattern
-            : loginForm.controls['email'].value === ""
+            : loginForm.controls['username'].value === ""
             ? errorsConstant.required
-            : loginForm.controls['email'].hasError("minlength")
+            : loginForm.controls['username'].hasError("minlength")
             ? errorsConstant.input.min_length_3
             : errorsConstant.input.max_length_128
         }}</mat-error>
@@ -76,6 +76,7 @@
         color="primary"
         class="button-action login c-button-large"
         [disabled]="loginForm.invalid"
+        type="submit"
       >
         {{ buttonConstant.accedi }}
       </button>

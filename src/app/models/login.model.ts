@@ -5,7 +5,7 @@ export interface LoginModelRequest {
   /** Password dell'utente */
   password: string;
   /** Se l'utente deve rimanere loggato oppure no */
-  rememberMe: boolean;
+  //rememberMe: boolean;
 }
 
 /** Interfaccia per la risposta della richiesta di login */
@@ -23,4 +23,3 @@ export interface SessioneUtenteModel {
   /** Il tipo di utente */
   usertype: string;
 }
-

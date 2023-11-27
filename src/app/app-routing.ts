@@ -18,6 +18,13 @@ export const routes: Routes = [
           ),
       },
       {
+        path: 'prova',
+        loadChildren: () =>
+          import('./modules/prova/prova-routing').then(
+            (m) => m.routes
+          ),
+      },
+      {
         path: 'login',
         loadChildren: () =>
           import('./modules/login/login-routing').then((m) => m.routes),
