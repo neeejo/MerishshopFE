@@ -1,3 +1,4 @@
+<div class="container">
 <label for="prodSelect"> Scegli un prodotto da modificare: </label>
 <select (change)="select()" [(ngModel)]="value" name="prodotto" id="prodSelect" >   
 <option *ngFor="let prodotto of prodotti;" [ngValue]="prodotto">{{prodotto.nome}}</option>
@@ -5,4 +6,5 @@
 
 
 <app-prodotto *ngIf="isSelected" [data]="value"></app-prodotto>
+</div>
 
