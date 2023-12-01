@@ -1,5 +1,7 @@
 <label for="prodSelect"> Scegli i prodotti da inserire: </label>
-    <select (change)="selection()" [(ngModel)]="singleselec" id="prodSelect">
-        <option *ngFor="let prodotto of prodotti;" [ngValue]="prodotto">{{prodotto.nome}}</option>
+<select (change)="selection()" [(ngModel)]="singleselec" id="prodSelect">
+  <option *ngFor="let prodotto of prodotti" [ngValue]="prodotto">
+    {{ prodotto.nome }}
+  </option>
 </select>
 <button type="button" (click)="inviaLista()">SALVA SELEZIONE</button>
