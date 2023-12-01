@@ -1,0 +1,5 @@
+<form [formGroup]="ordineForm" (ngSubmit)="onSubmit()">
+  <app-figlio (mandaProdotto)="getLista($event)" > </app-figlio>
+  <div><input formControlName="quantita" />Inserisci la quantità</div>
+  <button type="submit">INSERISCI ORDINE</button>
+</form>

@@ -7,7 +7,7 @@ export const routes: Routes = [
     {
         path : '',
         title : 'Prodotto',
-        loadComponent:() => import('../lista-prodotti/lista-prodotti.component'),
+        loadComponent:() => import('../padre/padre.component'),
         resolve: {
             prodotti : () => inject(ProvaService).getAllProdotti(),
         },
@@ -20,7 +20,8 @@ export const routes: Routes = [
             {
                 path:'prodotto',
                 title:'Prodotto',
-                loadComponent: () => import('../prodotto/prodotto.component'),
+                loadComponent: () => import('../figlio/figlio.component'),
+                
             },
         ],
     },
