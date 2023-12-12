@@ -26,4 +26,5 @@ export default class FiglioComponent {
     this.lista.push(this.singleselec);
     console.log(this.lista);
   }
+
 }
